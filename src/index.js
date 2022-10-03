@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import SearchCourses from './routes/SearchCourse'
-import ListOfStudent from './routes/RegisteredStudents'
+import ListOfStudent from './routes/ListOfStudents'
 import PaidStudents from './routes/PaidStudents'
 import StudentsInCourse from './routes/StudentsInCourse'
 
