@@ -4,11 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import SearchCourses from './routes/SearchCourse'
+import ListOfStudent from './routes/RegisteredStudents'
+import PaidStudents from './routes/PaidStudents'
+import StudentsInCourse from './routes/StudentsInCourse'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+
+  <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<App />} >
+
+        {/* nested routes */}
+        <Route path="courselist" element={<SearchCourses/>}>
+          <Route path=":coursename" element={<StudentsInCourse/>}/>
+        </Route>
+        
+        <Route path='studentslist' element ={<ListOfStudent/>}/>
+        {/* <Route path='unregisteredstudents' element ={<UnRegisteredStudent/>}/> */}
+        <Route path='finanialreports' element ={<PaidStudents/>}/>
+        </Route>
+      </Routes>
+  </BrowserRouter>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
