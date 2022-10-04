@@ -9,7 +9,7 @@ function App() {
     <nav className='mainnav'>
       <Link className='linkclass' to="/courselist">Courses List</Link> |{" "}
       <Link className='linkclass' to="/studentslist">List of Students</Link> |{" "}
-      {/* <Link to="/unregisteredstudents">UnRegistered Students</Link> |{" "} */}
+      <Link className='linkclass' to="/registeredstudents">Registered Students</Link> |{" "}
       <Link className='linkclass' to="/finanialreports">Financial Reports</Link> {" "}
     
     </nav>

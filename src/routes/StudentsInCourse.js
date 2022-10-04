@@ -1,6 +1,6 @@
 import { useParams, Outlet } from "react-router-dom";
 import { getCourses } from "../data/Courses";
-//import { getStudents } from "../data/Students";
+import '../css/mainstyle.css'
 
 export default function StudentsInCourse() {
   let params = useParams(); //returns an object of key from the current URL 
@@ -29,23 +29,13 @@ export default function StudentsInCourse() {
 
   return (
     <div>
-      <h3 style={{
-        margin: "10px",
-        color:'#b30000'
-      }}>Students Registered in Course: {id}</h3>
-      <div
-        style={{
-          //borderRight: "solid 1px",
-          margin: "1rem",
-          fontWeight: "450",
-          color:'blue'          
-        }}
-      >
+      <h3 className="h3style">Students Registered in Course: {id}</h3>
+      <div className="infostyle">
         
         {list.map((student) => ( //in the array contains all students that is registered in the course
           
           <div
-            style={{ display: "block", margin: "1rem 0" }}
+            className="liststyle"
             key={student}
           >
             {/* display the array content (the students names) */}

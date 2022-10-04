@@ -9,6 +9,8 @@ import SearchCourses from './routes/SearchCourse'
 import ListOfStudent from './routes/ListOfStudents'
 import PaidStudents from './routes/PaidStudents'
 import StudentsInCourse from './routes/StudentsInCourse'
+import StudentsList from './routes/RegisteredStudents'
+import StudentInfo from './routes/StudentInfo'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +28,9 @@ root.render(
         </Route>
         
         <Route path='studentslist' element ={<ListOfStudent/>}/>
-        {/* <Route path='unregisteredstudents' element ={<UnRegisteredStudent/>}/> */}
+        <Route path='registeredstudents' element ={<StudentsList/>}>
+          <Route path=':studentinfo' element ={<StudentInfo/>}/>
+        </Route>
         <Route path='finanialreports' element ={<PaidStudents/>}/>
         </Route>
       </Routes>

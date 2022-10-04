@@ -1,5 +1,6 @@
 import {Outlet } from "react-router-dom";
 import { getStudents } from "../data/Students";
+import '../css/mainstyle.css'
 
 export default function PaidStudents() {
   
@@ -27,22 +28,12 @@ export default function PaidStudents() {
 
   return (
     <div>
-      <h3 style={{ //inline style
-        margin: "10px",
-        color:'#b30000'
-      }}>List of students that paid</h3>
-      <div
-        style={{
-          margin: "1rem",
-          fontWeight: "450",
-          color:'blue'
-        }}
-      >
+      <h3 className="h3style">List of students that paid</h3>
+      <div className="infostyle">
         
         {list.map((student) => ( //in the array contains all students that paid
           
-          <div
-            style={{ display: "block", margin: "1rem 0" }}
+          <div className="liststyle"
             key={student}
           >
             {/* display the array content (the students names) */}

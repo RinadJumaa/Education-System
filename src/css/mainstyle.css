@@ -1,0 +1,52 @@
+.divstyle{
+    display: flex;
+    /* justify-content:start; */
+}
+.navstyle{
+    border-right: solid 1px;
+    padding: 1rem;
+    background-color:antiquewhite;
+}
+
+.linkstyle, .liststyle{
+    display: block;
+    margin: 1rem 0;
+}
+
+.navlinkstyle{
+    display: block;
+    margin: 1rem 0;
+    /* color: red ; */
+    font-weight: bold;
+    text-decoration :none;
+}
+.navlinkstyle:active{
+    color: red ;
+}
+
+.inputstyle{
+    padding:10px;
+    font-weight:bold;
+    font-size: 15px;
+}
+
+.h3style{
+    margin: 10px;
+    color:#b30000;
+    
+}
+
+.infostyle, p{
+    margin: 1rem;
+    font-weight: 450;
+    color:blue;
+}
+
+.info{
+    padding: 1rem;
+}
+
+.maindiv{
+    border: solid 1px;
+}
+

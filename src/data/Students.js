@@ -50,7 +50,7 @@ let StudentsList = [
   }
 
   export function getRegisteredStudents() {
-    return StudentsList.forEach(
+    return StudentsList.find(
       (student) => StudentsList.operation === "Registered"
     );
   }
