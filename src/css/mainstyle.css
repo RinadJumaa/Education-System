@@ -16,7 +16,7 @@
 .navlinkstyle{
     display: block;
     margin: 1rem 0;
-    /* color: red ; */
+    padding-left: 1rem;
     font-weight: bold;
     text-decoration :none;
 }
@@ -48,5 +48,9 @@
 
 .maindiv{
     border: solid 1px;
+}
+
+.titlestyle{
+    color:#b30000;
 }
 

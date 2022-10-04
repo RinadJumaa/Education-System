@@ -24,6 +24,7 @@ let registeredstudents = registeredlist()
   return (
     <div className="divstyle">
       <nav className="navstyle">
+        <h3 className="titlestyle">Registered Students</h3>
         {registeredstudents.map((student) => (
           <Link className="navlinkstyle"
             to={`/registeredstudents/${student.name}`}

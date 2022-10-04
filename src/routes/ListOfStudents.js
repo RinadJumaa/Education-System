@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { getStudents } from "../data/Students";
 import '../css/mainstyle.css'
 
@@ -45,34 +45,24 @@ export default function ListOfStudent() {
   
 
   return (
-    <div>
-      <div className="maindiv" >
-        <h3 className="h3style">List of Registered Students</h3>
-        <div className="infostyle">  
-          {registeredstudents.map((student) => ( //in the array contains all students that is registered
+    <div className="divstyle">
+      <nav className="navstyle">
+        <h3 className="titlestyle">List of Students</h3>
+          {students.map((student) => ( //in the array contains all students that is registered
             
             <div className="liststyle"
               key={student}
             >
               {/* display the array content (the students names) */}
-              {(regcount++) + ": " + student}
+              <Link className="navlinkstyle"
+                to={`/studentslist/${student.name}`}
+                key={student.name}
+              >
+                {student.name}
+              </Link>
             </div>
           ))}
-          
-        </div>
-      </div>
-      <h3 className="h3style">List of UnRegistered Students</h3>
-      <div className="infostyle">
-        {/* display the array content (the students names) */}
-        {unregisteredstudents.map((student) => ( //in the array contains all students that is registered    
-          <div className="liststyle"
-            key={student}
-          >
-            {(unregcount++) + ": " + student}
-          </div>
-        ))}
-        
-      </div>
+      </nav>
       <Outlet/>
     </div>
    

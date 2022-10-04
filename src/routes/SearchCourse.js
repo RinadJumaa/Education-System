@@ -7,8 +7,7 @@ import '../css/mainstyle.css'
     let [searchParams, setSearchParams] = useSearchParams(); // read and modify the query string in the URL
   
     return (
-      <div style={
-        { display: "flex",}}>
+      <div className="divstyle">
         <nav className="navstyle">
           <input className="inputstyle"
             value={searchParams.get("filter") || ""} 

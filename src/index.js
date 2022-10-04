@@ -27,7 +27,9 @@ root.render(
           <Route path=":coursename" element={<StudentsInCourse/>}/>
         </Route>
         
-        <Route path='studentslist' element ={<ListOfStudent/>}/>
+        <Route path='studentslist' element ={<ListOfStudent/>}>
+          <Route path=':studentinfo' element ={<StudentInfo/>}/>
+        </Route>
         <Route path='registeredstudents' element ={<StudentsList/>}>
           <Route path=':studentinfo' element ={<StudentInfo/>}/>
         </Route>
